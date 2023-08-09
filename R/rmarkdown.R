@@ -12,8 +12,9 @@ render_github_md <- function() {
   )
 
   # fixed path to github url
-  githubRaw <- file.path(
-    stringr::str_remove(github, "/$"), "raw/main")
+  githubRaw <- "/../../raw/main"
+  # file.path(
+  #   stringr::str_remove(github, "/$"), "raw/main")
 
   basename(rstudioapi::getSourceEditorContext()$path) |>
     stringr::str_replace("\\.[Rr][Mm][Dd]", ".md") -> mdfilename
