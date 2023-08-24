@@ -4,6 +4,7 @@
 #' @export
 render_github_md <- function() {
 
+  pj <- rprojroot::find_rstudio_root_file()
   # render to md
   rmarkdown::render(
     input = rstudioapi::getSourceEditorContext()$path,
